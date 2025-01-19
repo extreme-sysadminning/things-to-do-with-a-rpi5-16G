@@ -53,11 +53,13 @@ Download the benchmark:
 
         tar xzvf Geekbench-*.tar.gz
 
-4. Change directory and run the benchmark:
+4. Run the benchmark:
 
-        cd Geekbench-*-LinuxARMPreview/ ; ./geekbench6 --cpu
+        echo 3000000 | sudo tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_max_freq
+        cd Geekbench-*-LinuxARMPreview/
+        ./geekbench6 --cpu
 
-5. Review the results with the provided URL.
+6. Review the results with the provided URL.
 
 To overclock you can add this line to /boot/firmware/config and reboot, try 100 MHz more, then reboot and run the benchmark. If the machine seems stable, add 100MHz more. Once the benchmark fails or the machine gets unstable, reduce by 100MHz:
 
