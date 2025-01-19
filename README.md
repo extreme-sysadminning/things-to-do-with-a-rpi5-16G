@@ -22,11 +22,14 @@ I recommend to install Raspberry Pi OS, the original. Install to a SDCard first,
 1. Install Raspberry Pi OS to SDCard: https://www.raspberrypi.com/software/
 2. Connect a Keyboard, Mouse and Display
 3. Get network access:
-4. Update the system and firmwares.
+4. Update the system and firmware:
 
         apt update
         apt dist-upgrade -y
+        reboot
+        raspi-config # Advanced Options > Bootloader Version > select "Latest"
         rpi-update
+        reboot
         rpi-eeprom-update
         reboot
 
