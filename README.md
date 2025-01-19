@@ -24,6 +24,12 @@ I recommend to install Raspberry Pi OS, the original. Install to a SDCard first,
 3. Get network access:
 4. Update the system and firmwares.
 
+        apt update
+        apt dist-upgrade -y
+        rpi-update
+        rpi-eeprom-update
+        reboot
+
 ## Install a NVME disk
 
 Buy:
